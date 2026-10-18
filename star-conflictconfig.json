@@ -374,7 +374,7 @@
         "DisplayName": "Battle Pass",
         "Category": "Star Conflict:rocket_launch",
         "Subcategory": "Battle Pass:military_tech:7",
-        "Description": "Runs the battle pass (one stage, the 41 rewards in battle_pass.xml) from Battle Pass Start until Battle Pass End. Untick and restart to restore the game's original, expired 2023 battle pass dates. Edits: server/cloud/data/default_platform_config.lua (battlePassStart / battlePassEndTable at the top and cvars.store_battlePassUnlockLvlBtnStart, edited in place).",
+        "Description": "Runs a battle pass event (Battle Pass Event, Battle Pass Stages) from Battle Pass Start until Battle Pass End. Untick and restart to restore the game's own battle_pass.xml and its original, expired 2023 dates. Edits: server/cloud/data/battle_pass.xml (rewritten), server/cloud/data/default_platform_config.lua (battlePassStart / battlePassEndTable at the top and cvars.store_battlePassUnlockLvlBtnStart, edited in place); writes battle-pass/client/battle_pass.lua.",
         "Keywords": "battle,pass,battlepass,season,event",
         "FieldName": "BattlePassEnabled",
         "InputType": "checkbox",
@@ -386,6 +386,36 @@
             "False": "false",
             "True": "true"
         }
+    },
+    {
+        "DisplayName": "Battle Pass Event",
+        "Category": "Star Conflict:rocket_launch",
+        "Subcategory": "Battle Pass:military_tech:7",
+        "Description": "Which event to run: the key of an event in battle-pass/events.json (built in, rewritten on every start) or battle-pass/custom-events.json (your own, created once with an example and never overwritten), both in the file manager. Built in: precursors-2026 (Legacy of the Precursors, the game's current battle pass, 4 stages). Players need the client file battle-pass/client/battle_pass.lua unless the event is the one the unmodified game client knows (precursors-2026, stage 1); the console says which. Format and reward list: docs/BATTLE_PASS.md. Edits: server/cloud/data/battle_pass.xml.",
+        "Keywords": "battle,pass,battlepass,season,event,stage,xenochips",
+        "FieldName": "BattlePassEvent",
+        "InputType": "text",
+        "IsFlagArgument": false,
+        "ParamFieldName": "BattlePassEvent",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "precursors-2026",
+        "EnumValues": {},
+        "Placeholder": "precursors-2026"
+    },
+    {
+        "DisplayName": "Battle Pass Stages",
+        "Category": "Star Conflict:rocket_launch",
+        "Subcategory": "Battle Pass:military_tech:7",
+        "Description": "Which stages of the event are active, e.g. 1 or 1,2,3. Empty or 'all' = every stage of the event. All active stages end at Battle Pass End. Only stage 1 of precursors-2026 works with the unmodified game client; other stages need the client file (see Battle Pass Event). Edits: server/cloud/data/default_platform_config.lua (battlePassEndTable at the top, edited in place).",
+        "Keywords": "battle,pass,battlepass,season,event,stage,xenochips",
+        "FieldName": "BattlePassStages",
+        "InputType": "text",
+        "IsFlagArgument": false,
+        "ParamFieldName": "BattlePassStages",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "1",
+        "EnumValues": {},
+        "Placeholder": "1,2,3,4"
     },
     {
         "DisplayName": "Battle Pass Start",

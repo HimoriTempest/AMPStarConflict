@@ -11,6 +11,7 @@ Linux and Windows hosts.
 |---|---|
 | This README | Installing and running the server: requirements, ports, settings, console, database |
 | [docs/CONSOLE.md](docs/CONSOLE.md) | Every console command: the template's account commands and the game's own Hub and Shard commands |
+| [docs/BATTLE_PASS.md](docs/BATTLE_PASS.md) | Battle pass events: the built-in event, your own events in JSON, the client file, every reward bundle |
 | [docs/ITEMS.md](docs/ITEMS.md) | Item, ship and title IDs for the `give` commands, split into lists in [docs/items/](docs/items/) |
 
 ## Requirements
@@ -117,7 +118,7 @@ the original behaviour on the next start. Each setting's description in AMP name
 | Economy | XP / Credit / First Win Of The Day XP Multiplier, Bonus GS Per Win / Loss, Daily Token Credit Limit, Ship / Module / Ammo Price Multiplier, Buy Everything | Buy Everything allows obsolete and dev items, which can break an account |
 | Battles | AFK Kick Time, Open Space Resurrection Cost | |
 | Matchmaking | Ships In Arena Matches, Kick Excessive Bots, Coop vs AI Team Size (experimental) | Ships In Arena Matches is the total per match, filled with bots (max. 16 in the newbie queue, 24 otherwise) |
-| Battle Pass | Battle Pass, Start, End | Dates are taken as UTC. Changing the start begins a new battle pass, and existing progress is lost |
+| Battle Pass | Battle Pass, Event, Stages, Start, End | Runs a battle pass event from `instance/battle-pass/events.json` (built in) or `custom-events.json` (yours). Anything beyond stage 1 of the built-in event needs a client file on every player's PC. Dates are taken as UTC. Changing the start begins a new battle pass, and existing progress is lost. See [BATTLE_PASS.md](docs/BATTLE_PASS.md) |
 | Network | Public Address, Max Players | |
 | Database | MongoDB (Bundled / External), External MongoDB Hosts, MongoDB Cache Size (GB) | See [External MongoDB](#external-mongodb) |
 | Shop (experimental) | DLC Packs In Shop, Destroyer Pack Items In Shop | Sells the former DLC and destroyer pack contents for GS. Not yet confirmed in the client |
