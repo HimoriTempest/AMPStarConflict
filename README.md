@@ -13,6 +13,7 @@ Linux and Windows hosts.
 | [docs/CONSOLE.md](docs/CONSOLE.md) | Every console command: the template's account commands and the game's own Hub and Shard commands |
 | [docs/BATTLE_PASS.md](docs/BATTLE_PASS.md) | Battle pass events: the built-in event, your own events in JSON, the client file, every reward bundle |
 | [docs/ITEMS.md](docs/ITEMS.md) | Item, ship and title IDs for the `give` commands, split into lists in [docs/items/](docs/items/) |
+| [docs/SERVER_FILES.md](docs/SERVER_FILES.md) | Handbook of the game's server files, in English: every service and file in `server/cloud/`, and every setting in `default_platform_config.lua` ([docs/server-files/](docs/server-files/default_platform_config.md)) |
 
 ## Requirements
 
