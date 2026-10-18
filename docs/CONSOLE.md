@@ -9,7 +9,7 @@ Set a **Remote Console Password** (instance settings, Administration) and restar
 - `<command>` runs on **Hub**. Its output appears in the console through Hub's log, with timestamps.
 - `shard <command>` runs on **Shard**. Its output is printed with `[Shard]` in front, followed by `executed '<command>', result is: success|failure`.
 
-Parameters in `<angle brackets>` are required, `[square brackets]` optional. `help <command>` shows a command's parameters, `help <cvar>` a setting's description. A command takes a few seconds (see [Remote console](README.md#remote-console) for why).
+Parameters in `<angle brackets>` are required, `[square brackets]` optional. `help <command>` shows a command's parameters, `help <cvar>` a setting's description. A command takes a few seconds.
 
 Markers: ⚠ changes or stops something, use with care. ⛔ don't use on a live server.
 
@@ -153,5 +153,5 @@ These exist in every service. On Shard, put `shard ` in front.
 
 ## Not here
 
-- **Kick, mute and ban** are not console commands (granting is, see [Account commands](#account-commands)). They are admin tasks, used in game through the Punish menu (Admin and Moderator roles, see [Admin and moderator roles](README.md#admin-and-moderator-roles)).
+- **Kick, mute and ban** are not console commands (granting is, see [Account commands](#account-commands)). They are admin tasks, used in game through the Punish menu (Admin and Moderator roles, see [Admins and moderators](../README.md#admins-and-moderators)).
 - **Other services** (MatchMaker, ChatServer, …) have their own consoles with the same engine commands, but the template only opens Hub's and Shard's.

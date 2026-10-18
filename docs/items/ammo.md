@@ -2,7 +2,7 @@
 
 [← Item list](../ITEMS.md) · IDs for the [account commands](../CONSOLE.md#account-commands)
 
-Each row is one item in all its grades; the grade columns hold the ID of each grade. Items without grades are listed [further down](#other-ammo).
+Each row is one item in all its grades; the grade columns hold the ID of each grade. Items without grades are listed [further down](#other-missiles-and-ammunition).
 
 | Name | Type | Mk1 | Mk2 | Mk3 | Rare | Epic | Relic | Premium | Description |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---|
