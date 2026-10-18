@@ -448,6 +448,36 @@
         "Placeholder": "2026-12-31T23:59:59Z"
     },
     {
+        "DisplayName": "Xenochip Cap",
+        "Category": "Star Conflict:rocket_launch",
+        "Subcategory": "Battle Pass:military_tech:7",
+        "Description": "The most xenochips (the battle pass currency, the game's event credits) a player can hold at once (EventCreditsCap, vanilla 300). Shard drops quest rewards that would go over it, so raise it together with Xenochip Quest Reward Multiplier. Edits: server/cloud/data/aux_limits.xml (EventCreditsCap, edited in place).",
+        "Keywords": "battle,pass,xenochips,event,credits,quests,limit",
+        "FieldName": "XenochipCap",
+        "InputType": "number",
+        "IsFlagArgument": false,
+        "ParamFieldName": "XenochipCap",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "300",
+        "EnumValues": {},
+        "MinValue": "1"
+    },
+    {
+        "DisplayName": "Xenochip Quest Reward Multiplier",
+        "Category": "Star Conflict:rocket_launch",
+        "Subcategory": "Battle Pass:military_tech:7",
+        "Description": "Multiplies the xenochips from the 12 xenochip quests (rewardEventCredits, vanilla 5 each and 10 for the last, about 65 a day; they are offered again every 20 hours and unlock at account rank 3). 15 gives about 975 a day. Rounded, at least 1 per quest. Players only get xenochips while the battle pass is on. The client's quest window may still show the vanilla amounts. Edits: server/cloud/data/quests.xml (rebuilt from the game's copy; 1 restores it).",
+        "Keywords": "battle,pass,xenochips,event,credits,quests,limit",
+        "FieldName": "XenochipQuestMultiplier",
+        "InputType": "number",
+        "IsFlagArgument": false,
+        "ParamFieldName": "XenochipQuestMultiplier",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "1",
+        "EnumValues": {},
+        "MinValue": "0"
+    },
+    {
         "DisplayName": "Coop vs AI Team Size (experimental)",
         "Category": "Star Conflict:rocket_launch",
         "Subcategory": "Matchmaking:groups:4",

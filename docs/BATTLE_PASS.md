@@ -17,10 +17,27 @@ All of them are under **Battle Pass** in the instance settings.
 | Battle Pass Stages | Active stages, e.g. `1` or `1,2,3`. Empty or `all` = every stage of the event. Default `1`. |
 | Battle Pass Start | Start, in UTC. Player progress is stored per start time, so a new start date begins a new battle pass and existing progress is lost. |
 | Battle Pass End | End of every active stage, in UTC. Empty = no end. |
+| Xenochip Cap | The most xenochips a player can hold at once. Vanilla 300. |
+| Xenochip Quest Reward Multiplier | Multiplies what the xenochip quests pay. Vanilla 1, about 65 a day. |
 
 On each start the console shows which event and stages are running and whether players need the client
 file. A typo (unknown event, stage that doesn't exist, invalid date, broken custom event) leaves the battle
 pass off, and the console says why.
+
+## Earning xenochips
+
+Xenochips are the game's *event credits*. Players earn them from 12 quests: 11 pay 5 xenochips and the last
+pays 10. The quests are offered again every 20 hours and only unlock at **account rank 3**. With vanilla values
+that's about 65 xenochips a day, and every level costs 100.
+
+- **Credits event.** Shard only pays event credits while the game's *credits event* is running, so the template
+  runs it over the same dates as the battle pass (`creditsEventStart` / `creditsEventEnd` in
+  `default_platform_config.lua`; with no Battle Pass End, until the end of 2099). With the battle pass off, the
+  quests pay nothing.
+- **Xenochip Cap** (`EventCreditsCap` in `aux_limits.xml`): the most a player can hold. Rewards that would go over it are dropped.
+- **Xenochip Quest Reward Multiplier** (`rewardEventCredits` in `quests.xml`): 15 makes each quest pay 75 (150 for the last), about 975 a day. Raise the cap along with it, e.g. to 1000.
+
+The client may still show the vanilla amounts in its quest window, since it has its own copy of the quests.
 
 ## Events
 
